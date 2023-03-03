@@ -10,5 +10,8 @@ namespace Northwind.Controllers
 
         // Product/Category view
         public IActionResult Category() => View(_dataContext.Categories.OrderBy(c => c.CategoryName).ToList());
+
+        // Product/Index view passing the Products table, filtered by CategoryId and Discontinued, ordered by ProductName
+        public IActionResult Index(int id) => View(_dataContext.Products.Where(p => p.CategoryId == id && p.Discontinued == false).OrderBy(p => p.ProductName));
     }
 }
