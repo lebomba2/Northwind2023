@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Discount>
+
+@{
+    ViewData["Title"] = "CurrentDiscounts";
+}
+
+<h2 class="mt-3"><i class="fas fa-list-ul"></i> Current Discounts</h2>
+<div class="list-group">
+    <!-- loop through discounts in the model to display their title and description -->
+    @foreach (Discount discount in @Model)
+    {
+            <div class="list-group-item list-group-item-action">
+                @discount.Title - <i style="opacity: .6;">@discount.Description</i> <div class="float-right">@discount.Code</div>
+            </div>
+    }
+</div>

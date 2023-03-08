@@ -13,5 +13,8 @@ namespace Northwind.Controllers
 
         // Product/Index view passing the Products table, filtered by CategoryId and Discontinued, ordered by ProductName
         public IActionResult Index(int id) => View(_dataContext.Products.Where(p => p.CategoryId == id && p.Discontinued == false).OrderBy(p => p.ProductName));
+
+        // Product/Current Discounts View
+        public IActionResult CurrentDiscounts() => View(_dataContext.Discounts.Where(d => d.StartTime <= DateTime.Now && d.EndTime > DateTime.Now));
     }
 }
