@@ -30,7 +30,9 @@
                 @d.Description
             </div>
             <!-- formats the date to not include the time-->
-              <i>Discount expires: @d.EndTime.ToString("MM/dd/yyyy")</i><br />
+            <i>Discount expires: @d.EndTime.ToString("MM/dd/yyyy")</i><br />
+            <!-- this anchor references Discount.code with data-code, and Discount.Title with data-product -->
+            <!-- these attributes will be referenced by the toast -->
             <a href="#" class="code" data-code="@d.Code" data-product="@d.Title"><i class="far fa-hand-point-right"></i> Discount Code</a>
         </div>
     }<a href="c:\users\christopher lebombar\source\repos\mvc2023\views\home\index.cshtml">c:\users\christopher lebombar\source\repos\mvc2023\views\home\index.cshtml</a>
