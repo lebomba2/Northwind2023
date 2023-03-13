@@ -1,4 +1,4 @@
-    using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 public class DataContext : DbContext
 {
@@ -9,5 +9,8 @@ public class DataContext : DbContext
 
     //add a new db set for the discount class 
 
-      public DbSet<Discount> Discounts { get; set; }
+    public DbSet<Discount> Discounts { get; set; }
+    public DbSet<Customer> Customers { get; set; }
+
+
 }
