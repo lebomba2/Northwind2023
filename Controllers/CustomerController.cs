@@ -28,10 +28,10 @@ public class CustomerController : Controller
         }
         else
         {
-            _dataContext.Add(model);
-            _dataContext.SaveChanges();
-            return RedirectToAction("Index");
-        }
+            _dataContext.AddCustomer(model);
+        return RedirectToAction("Index");
+    }
         return View();
     }
 }
+
