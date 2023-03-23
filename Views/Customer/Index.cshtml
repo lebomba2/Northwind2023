@@ -1,8 +1,14 @@
 ﻿@model IEnumerable<Customer>
 
-<ul>
+<h2>Customer Name and Phone</h2>
+<ul class="list-group">
   @foreach (Customer customer in Model)
   {
-    <li>@customer.CompanyName</li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col">@customer.CompanyName</div>
+            <div class="col">@customer.Phone</div>
+        </div>
+    </li>
   }
 </ul>
